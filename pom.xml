@@ -8,6 +8,10 @@
     <artifactId>plainselenium</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+            <browser>Chrome</browser>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -43,7 +47,7 @@
                     </suiteXmlFiles>
 
                     <systemPropertyVariables>
-                        <propertyName>firefox</propertyName>
+                        <browser>${browser}</browser>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

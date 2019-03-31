@@ -2,14 +2,19 @@ package com.github.flodek.adapter;
 
 import org.openqa.selenium.WebDriver;
 
-public abstract class WebDriverWrapper {
-    WebDriver driver;
+abstract class WebDriverWrapper {
+
+    private static WebDriver driver;
 
     abstract protected void createDriver();
 
-    public WebDriver getDriver() {
+    void setDriver(WebDriver driver) {
+        WebDriverWrapper.driver = driver;
+    }
 
-        if(driver == null) {
+    WebDriver getDriver() {
+
+        if (driver == null) {
             createDriver();
         }
 

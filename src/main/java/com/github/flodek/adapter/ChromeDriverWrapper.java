@@ -9,6 +9,6 @@ class ChromeDriverWrapper extends WebDriverWrapper {
 
     @Override
     protected void createDriver() {
-        driver = new ChromeDriver();
+        setDriver(new ChromeDriver());
     }
 }
