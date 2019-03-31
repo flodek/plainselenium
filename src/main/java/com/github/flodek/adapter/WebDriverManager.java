@@ -2,26 +2,26 @@ package com.github.flodek.adapter;
 
 public class WebDriverManager {
 
-    private static WebDriverWrapper webDriverWrapper;
+    private static final ThreadLocal<WebDriverWrapper> WEB_DRIVER_WRAPPER = new ThreadLocal<>();
 
     static WebDriverWrapper getWebDriverWrapper() {
 
-        if(webDriverWrapper == null) {
+        if(WEB_DRIVER_WRAPPER.get() == null) {
             throw new NullPointerException("WebDriverWrapper is not initialized");
         }
 
-        return webDriverWrapper;
+        return WEB_DRIVER_WRAPPER.get();
     }
 
     public static void initWebDriverManager(BrowserType browser) {
 
         switch (browser) {
             case Chrome:
-                webDriverWrapper = new ChromeDriverWrapper();
+                WEB_DRIVER_WRAPPER.set(new ChromeDriverWrapper());
                 break;
 
             case Firefox:
-                webDriverWrapper = new ChromeDriverWrapper();
+                WEB_DRIVER_WRAPPER.set(new ChromeDriverWrapper());
                 break;
 
             default:
@@ -32,7 +32,8 @@ public class WebDriverManager {
     }
 
     public static void quitWebDriver() {
-        WebDriverManager.getWebDriverWrapper().quitDriver();
+        getWebDriverWrapper().quitDriver();
+        WEB_DRIVER_WRAPPER.remove();
     }
 
 }

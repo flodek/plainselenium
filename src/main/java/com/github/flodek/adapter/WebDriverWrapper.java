@@ -21,7 +21,7 @@ abstract class WebDriverWrapper {
         return driver;
     }
 
-    public void quitDriver() {
+    void quitDriver() {
         driver.close();
         driver.quit();
         driver = null;
