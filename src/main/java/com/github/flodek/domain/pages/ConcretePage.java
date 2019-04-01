@@ -8,7 +8,7 @@ public class ConcretePage extends Page {
     @FindBy(css = "#contact-link")
     WebElement contactLink;
 
-    public void click() {
+    public void clickContactLink() {
         contactLink.click();
     }
 

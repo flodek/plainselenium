@@ -11,5 +11,4 @@ public class PageFactoryWrapper extends PageFactory {
     public static void initElements(Object page) {
         initElements(WebDriverManager.getWebDriverWrapper().getDriver(), page);
     }
-
 }

@@ -6,7 +6,7 @@ public class WebDriverManager {
 
     static WebDriverWrapper getWebDriverWrapper() {
 
-        if(WEB_DRIVER_WRAPPER.get() == null) {
+        if (WEB_DRIVER_WRAPPER.get() == null) {
             throw new NullPointerException("WebDriverWrapper is not initialized");
         }
 
