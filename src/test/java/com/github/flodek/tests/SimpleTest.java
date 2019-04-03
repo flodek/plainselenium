@@ -1,6 +1,7 @@
 package com.github.flodek.tests;
 
 import com.github.flodek.domain.pages.ConcretePage;
+import com.github.flodek.utils.PageManager;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
@@ -10,7 +11,7 @@ public class SimpleTest extends BaseTest {
     @Test(description = "It's a simple test")
     public void simpleTest() {
 
-        ConcretePage concretePage = new ConcretePage();
+        ConcretePage concretePage = PageManager.getPage(ConcretePage.class);
         concretePage.clickContactLink();
     }
 }
