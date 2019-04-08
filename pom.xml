@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-            <browser>Chrome</browser>
+        <browser>Chrome</browser>
     </properties>
 
     <dependencies>
@@ -31,9 +31,9 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
                 <configuration>
-                    <target>1.11</target>
-                    <source>1.11</source>
+                    <release>11</release>
                 </configuration>
             </plugin>
 
@@ -41,17 +41,20 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.1</version>
+
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>mytestng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
-
                     <systemPropertyVariables>
                         <browser>${browser}</browser>
                     </systemPropertyVariables>
+                    <argLine>
+                        --illegal-access=permit
+                    </argLine>
                 </configuration>
-            </plugin>
 
+            </plugin>
         </plugins>
     </build>
 
