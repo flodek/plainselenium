@@ -13,7 +13,7 @@ public class WebDriverManager {
         return WEB_DRIVER_WRAPPER.get();
     }
 
-    public static void initWebDriverManager(BrowserType browser) {
+    public static void initWebDriverWrapper(BrowserType browser) {
 
         switch (browser) {
             case Chrome:

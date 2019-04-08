@@ -11,7 +11,7 @@ class ChromeDriverWrapper extends WebDriverWrapper {
     protected void createDriver() {
         setDriver(new ChromeDriver());
     }
-    
+
     protected void startService() {
         throw new UnsupportedOperationException("Not implemented yet");
     }

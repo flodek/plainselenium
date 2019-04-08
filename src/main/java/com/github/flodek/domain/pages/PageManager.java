@@ -1,11 +1,9 @@
-package com.github.flodek.utils;
-
-import com.github.flodek.domain.pages.Page;
+package com.github.flodek.domain.pages;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class PageManager {
+class PageManager {
 
     private static final ThreadLocal<Map<Class, Object>> PAGES = ThreadLocal.withInitial(HashMap::new);
 
