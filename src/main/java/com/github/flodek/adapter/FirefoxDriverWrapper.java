@@ -1,9 +1,11 @@
 package com.github.flodek.adapter;
 
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 class FirefoxDriverWrapper extends WebDriverWrapper {
 
     @Override
     protected void createDriver() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        setDriver(new FirefoxDriver());
     }
 }

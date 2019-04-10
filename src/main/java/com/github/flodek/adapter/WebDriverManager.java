@@ -21,7 +21,7 @@ public class WebDriverManager {
                 break;
 
             case Firefox:
-                WEB_DRIVER_WRAPPER.set(new ChromeDriverWrapper());
+                WEB_DRIVER_WRAPPER.set(new FirefoxDriverWrapper());
                 break;
 
             default:

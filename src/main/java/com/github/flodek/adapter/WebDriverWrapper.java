@@ -13,7 +13,6 @@ abstract class WebDriverWrapper {
     }
 
     WebDriver getDriver() {
-
         if (driver == null) {
             createDriver();
         }
@@ -22,7 +21,6 @@ abstract class WebDriverWrapper {
     }
 
     void quitDriver() {
-        driver.close();
         driver.quit();
         driver = null;
     }
