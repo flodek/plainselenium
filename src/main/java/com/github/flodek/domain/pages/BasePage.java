@@ -2,9 +2,9 @@ package com.github.flodek.domain.pages;
 
 import com.github.flodek.adapter.PageFactoryWrapper;
 
-abstract class Page {
+abstract class BasePage {
 
-    Page() {
+    BasePage() {
         PageFactoryWrapper.initElements(this);
     }
 }

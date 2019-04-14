@@ -1,8 +1,12 @@
 package com.github.flodek.domain.pages;
 
-public class Pages {
+public class PageContainer {
 
-    private Pages() {
+    private PageContainer() {
+    }
+
+    public static void removePages() {
+        PageManager.remove();
     }
 
     public static MainPage getMainPage() {
@@ -16,5 +20,4 @@ public class Pages {
     public static SignInPage getSignInPage() {
         return PageManager.getPage(SignInPage.class);
     }
-
 }

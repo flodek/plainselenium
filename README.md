@@ -12,6 +12,14 @@ The project is in active development. Please check the [list of features](https:
 * TestNG
 
 ## Usage
-Make sure you have Java 11 and maven installed. Execute **mvn clean test** command.
+Make sure you have Java 11 and maven installed. Please download and put the driver executable files in the root folder of the project.
+ 
+Execute **mvn clean test** from command line.  
+That will run the tests specified in testSuite.xml file in two parallel threads using Chrome browser.
 
-Do not forget to put driver executable files in the root folder of the project.
+You can change the default behavior specifying parameters as below:  
+**mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testSuite.xml -Dbrowser=chrome**
+
+The following parameters are supported:
+* **surefire.suiteXmlFiles** - path to the TestNG xml file
+* **browser** - browser type; possible values are **chrome** and **firefox**

@@ -1,5 +1,5 @@
 package com.github.flodek.domain.pages;
 
-public class ContactPage extends Page {
+public class ContactPage extends BasePage {
 
 }

@@ -3,7 +3,7 @@ package com.github.flodek.domain.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MainPage extends Page {
+public class MainPage extends BasePage {
 
     @FindBy(css = "#contact-link")
     WebElement contactUsLink;
@@ -13,12 +13,12 @@ public class MainPage extends Page {
 
     public ContactPage openContactUsPage() {
         contactUsLink.click();
-        return Pages.getContactPage();
+        return PageContainer.getContactPage();
     }
 
     public SignInPage openSignInPage() {
         signInLink.click();
-        return Pages.getSignInPage();
+        return PageContainer.getSignInPage();
     }
 
 }

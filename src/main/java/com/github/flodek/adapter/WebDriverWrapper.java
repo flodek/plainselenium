@@ -4,12 +4,12 @@ import org.openqa.selenium.WebDriver;
 
 abstract class WebDriverWrapper {
 
-    private static WebDriver driver;
+    private WebDriver driver;
 
     abstract protected void createDriver();
 
     void setDriver(WebDriver driver) {
-        WebDriverWrapper.driver = driver;
+        this.driver = driver;
     }
 
     WebDriver getDriver() {
@@ -24,5 +24,4 @@ abstract class WebDriverWrapper {
         driver.quit();
         driver = null;
     }
-
 }

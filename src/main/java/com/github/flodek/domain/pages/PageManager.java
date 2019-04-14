@@ -11,7 +11,7 @@ class PageManager {
     }
 
     @SuppressWarnings("unchecked")
-    public static <T extends Page> T getPage(Class<? extends Page> tClass) {
+    static <T extends BasePage> T getPage(Class<? extends BasePage> tClass) {
         try {
             if (!PAGES.get().containsKey(tClass)) {
                 PAGES.get().put(tClass, tClass.getDeclaredConstructor().newInstance());
@@ -22,6 +22,10 @@ class PageManager {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    static void remove() {
+        PAGES.remove();
     }
 
 }

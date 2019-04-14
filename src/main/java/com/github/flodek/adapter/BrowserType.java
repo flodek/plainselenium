@@ -1,8 +1,8 @@
 package com.github.flodek.adapter;
 
 public enum BrowserType {
-    Firefox("Firefox"),
-    Chrome("Chrome");
+    FIREFOX("Firefox"),
+    CHROME("Chrome");
 
     private String textRepresentation;
 

@@ -1,13 +1,11 @@
 package com.github.flodek.tests;
 
 import org.testng.annotations.Test;
-import org.testng.log4testng.Logger;
 
-import static com.github.flodek.domain.pages.Pages.getMainPage;
+import static com.github.flodek.domain.pages.PageContainer.getMainPage;
 import static org.testng.Assert.assertThrows;
 
 public class SimpleTest extends BaseTest {
-    private final static Logger logger = Logger.getLogger(SimpleTest.class);
 
     @Test(description = "Contact Page")
     public void contactPageTest() {
